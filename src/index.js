@@ -8,14 +8,22 @@ import { client } from './redis/client.js'
 
 await client.connect()
 
-https
-	.createServer(
-		{
-			key: fs.readFileSync('./src/certs/key.pem'),
-			cert: fs.readFileSync('./src/certs/cert.pem'),
-		},
-		app
-	)
-	.listen(PORT, () => {
-		console.log(`Https server running on port ${PORT}`)
+console.log(process.env.NODE_ENV)
+
+if (process.env.NODE_ENV === 'production') {
+	app.listen(PORT, () => {
+		console.log(`Server running on port ${PORT}`)
 	})
+} else {
+	https
+		.createServer(
+			{
+				key: fs.readFileSync('./src/certs/key.pem'),
+				cert: fs.readFileSync('./src/certs/cert.pem'),
+			},
+			app
+		)
+		.listen(PORT, () => {
+			console.log(`Https server running on port ${PORT}`)
+		})
+}
