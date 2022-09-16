@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt'
-import service from '../../services/users/index.js'
+import service from './../../services/users/index.js'
 
 import {
 	avatarRegex,
