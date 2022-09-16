@@ -6,7 +6,7 @@ import { PORT } from './config.js'
 import app from './app.js'
 import { client } from './redis/client.js'
 
-client.connect()
+await client.connect()
 
 https
 	.createServer(
