@@ -8,8 +8,6 @@ import { client } from './redis/client.js'
 
 await client.connect()
 
-console.log(process.env.NODE_ENV)
-
 if (process.env.NODE_ENV === 'production') {
 	app.listen(PORT, () => {
 		console.log(`Server running on port ${PORT}`)
