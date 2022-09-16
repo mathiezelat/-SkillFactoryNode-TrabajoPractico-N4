@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+		/>
+		<script defer src="/js/timeline.js"></script>
+		<title>Trabajo Práctico 4 - Mathías Ezequiel Latrónico</title>
+	</head>
+	<body>
+		<main class="container">
+			<div class="headings">
+				<h1>Trabajo Práctico 4</h1>
+				<h3>Mathías Ezequiel Latrónico</h3>
+			</div>
+			<div class="headings">
+				<h2>Tinder Job</h2>
+				<p>Aplicación estilo LinkedIn</p>
+			</div>
+			<div>
+				<a href="/profile" role="button"> Ir al profile </a>
+			</div>
+			<div>
+				<form action="/api/posts" id="form">
+					<label for="body">
+						Texto
+						<input
+							type="text"
+							id="body"
+							name="body"
+							required
+							placeholder="What's happening?"
+						/>
+					</label>
+
+					<label for="multimedia">
+						Multimedia
+						<input
+							type="text"
+							id="multimedia"
+							name="multimedia"
+							placeholder="https://i.imgur.com/TfpCCOA.jpg"
+						/>
+					</label>
+
+					<label for="author_id">
+						<input
+							type="text"
+							name="author_id"
+							id="author_id"
+							value="<%= id %>"
+							readonly
+							hidden
+						/>
+					</label>
+
+					<button type="submit">Publicar</button>
+				</form>
+			</div>
+			<div id="posts"></div>
+		</main>
+	</body>
+</html>

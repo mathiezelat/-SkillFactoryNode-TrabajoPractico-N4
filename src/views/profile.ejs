@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+		/>
+		<title>Trabajo Práctico 4 - Profile</title>
+	</head>
+	<body>
+		<main class="container">
+			<div class="headings">
+				<h1>Trabajo Práctico 4</h1>
+				<h3>Mathías Ezequiel Latrónico</h3>
+			</div>
+			<div>
+				<img
+					src="<%= avatar %>"
+					alt="A avatar profile"
+					width="100px"
+					height="100px"
+				/>
+				<div class="headings">
+					<h2><%= name %> <%= surname %></h2>
+					<p><%= email %></p>
+				</div>
+			</div>
+			<div>
+				<a href="/timeline" role="button"> Ir al timeline </a>
+				<a href="/settings" role="button"> Editar </a>
+				<a href="/api/auth/logout" role="button"> Cerrar sesión </a>
+			</div>
+			<div>
+				<h4>Información</h4>
+				<div>
+					<p><%= birthdate %></p>
+					<p><%= pronouns %></p>
+					<p><%= nationality %></p>
+					<p><%= residence %></p>
+					<p><%= phone %></p>
+					<p><%= description %></p>
+					<p><%= actualJob %></p>
+					<p><%= status %></p>
+					<p><%= language?.name %></p>
+					<p><%= country?.name %></p>
+					<p><%= state?.name %></p>
+					<p><%= city?.name %></p>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

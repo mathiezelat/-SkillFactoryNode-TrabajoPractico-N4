@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+		/>
+		<script defer src="/js/settings.js"></script>
+		<title>Trabajo Práctico 4 - Settings</title>
+	</head>
+	<body>
+		<main class="container">
+			<div class="headings">
+				<h1>Trabajo Práctico 4</h1>
+				<h3>Mathías Ezequiel Latrónico</h3>
+			</div>
+			<div>
+				<img
+					src="<%= avatar %>"
+					alt="A avatar profile"
+					width="100px"
+					height="100px"
+				/>
+				<div class="headings">
+					<h2><%= name %> <%= surname %></h2>
+					<p><%= email %></p>
+				</div>
+			</div>
+			<div>
+				<h3>Configuración</h3>
+				<div>
+					<form action="/api/users/<%= id %>" id="form">
+						<div class="grid">
+							<label for="name">
+								Nombres
+								<input
+									type="text"
+									id="name"
+									name="name"
+									value="<%= name %>"
+									required
+								/>
+							</label>
+
+							<label for="lastname">
+								Apellidos
+								<input
+									type="text"
+									id="surname"
+									name="surname"
+									value="<%= surname %>"
+									required
+								/>
+							</label>
+						</div>
+
+						<div>
+							<label for="avatar">Avatar</label>
+							<input
+								type="text"
+								id="avatar"
+								name="avatar"
+								value="<%= avatar %>"
+								required
+							/>
+							<label for="birthdate">Fecha de nacimiento</label>
+							<input
+								type="date"
+								id="birthdate"
+								name="birthdate"
+								value="<%= birthdate %>"
+							/>
+							<label for="pronouns">Pronombres</label>
+							<input
+								type="text"
+								id="pronouns"
+								name="pronouns"
+								value="<%= pronouns %>"
+							/>
+							<label for="nationality">Nacionalidad</label>
+							<input
+								type="text"
+								id="nationality"
+								name="nationality"
+								value="<%= nationality %>"
+							/>
+							<label for="residence">Residencia</label>
+							<input
+								type="text"
+								id="residence"
+								name="residence"
+								value="<%= residence %>"
+							/>
+							<label for="phone">Número de teléfono</label>
+							<input
+								type="text"
+								id="phone"
+								name="phone"
+								value="<%= phone %>"
+							/>
+							<label for="description">Descripción</label>
+							<input
+								type="text"
+								id="description"
+								name="description"
+								value="<%= description %>"
+							/>
+							<label for="actualJob">Trabajo actual</label>
+							<input
+								type="text"
+								id="actualJob"
+								name="actualJob"
+								value="<%= actualJob %>"
+							/>
+							<label for="status">Estado</label>
+							<input
+								type="text"
+								id="status"
+								name="status"
+								value="<%= status %>"
+							/>
+
+							<select name="language_id" id="languages"></select>
+							<select name="country_id" id="countries"></select>
+							<select name="state_id" id="states"></select>
+							<select name="city_id" id="cities"></select>
+							<select
+								name="organization_id"
+								id="organizations"
+							></select>
+						</div>
+						<button type="submit">Guardar</button>
+					</form>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

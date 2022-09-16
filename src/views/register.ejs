@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+		/>
+		<title>Trabajo Práctico 4 - Profile</title>
+	</head>
+	<body>
+		<main class="container">
+			<div class="headings">
+				<h1>Trabajo Práctico 4</h1>
+				<h3>Mathías Ezequiel Latrónico</h3>
+			</div>
+			<h3>Register</h3>
+			<div>
+				<form method="post" action="/api/auth/register">
+					<label for="name">
+						Nombre
+						<input type="name" id="name" name="name" required />
+					</label>
+
+					<label for="surname">
+						Apellido
+						<input
+							type="surname"
+							id="surname"
+							name="surname"
+							required
+						/>
+					</label>
+
+					<label for="email">
+						Correo electrónico
+						<input type="email" id="email" name="email" required />
+					</label>
+
+					<label for="password">
+						Contraseña
+						<input
+							type="password"
+							id="password"
+							name="password"
+							required
+						/>
+					</label>
+
+					<label for="avatar">
+						Avatar
+						<input
+							type="avatar"
+							id="avatar"
+							name="avatar"
+							required
+						/>
+					</label>
+
+					<button type="submit">Registrarse</button>
+				</form>
+			</div>
+		</main>
+	</body>
+</html>
