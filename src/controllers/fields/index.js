@@ -1,5 +1,5 @@
-import service from '../../services/fields/index.js'
-import { integerRegex } from '../../utils/regex.js'
+import service from './../../services/fields/index.js'
+import { integerRegex } from './../../utils/regex.js'
 
 const getAllFields = async (req, res) => {
 	const fields = await service.getAllFields()

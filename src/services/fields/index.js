@@ -1,4 +1,4 @@
-import Field from '../../models/Field.js'
+import Field from './../../models/Field.js'
 
 const getAllFields = () => {
 	const fields = Field.getAllFields()

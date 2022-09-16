@@ -1,4 +1,4 @@
-import Skill from '../../models/Skill.js'
+import Skill from './../../models/Skill.js'
 
 const getAllSkills = () => {
 	const skills = Skill.getAllSkills()

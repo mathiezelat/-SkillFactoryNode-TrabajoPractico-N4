@@ -5,11 +5,11 @@ import {
 	GOOGLE_CLIENT_ID,
 	GOOGLE_CLIENT_SECRET,
 	GOOGLE_CLIENT_REDIRECT,
-} from '../config.js'
+} from './../config.js'
 
-import User from '../models/User.js'
+import User from './../models/User.js'
 
-import { uniqueID } from '../utils/uniqueID.js'
+import { uniqueID } from './../utils/uniqueID.js'
 
 passport.serializeUser((user, done) => {
 	done(null, user.id)

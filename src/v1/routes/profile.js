@@ -1,6 +1,6 @@
 // perfil, timeline, settings
 import { Router } from 'express'
-import { isAuthenticated } from '../../middlewares/auth.js'
+import { isAuthenticated } from './../../middlewares/auth.js'
 
 const router = Router()
 

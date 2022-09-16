@@ -1,4 +1,4 @@
-import Organization from '../../models/Organization.js'
+import Organization from './../../models/Organization.js'
 
 const getAllOrganizations = () => {
 	const organizations = Organization.getAllOrganizations()

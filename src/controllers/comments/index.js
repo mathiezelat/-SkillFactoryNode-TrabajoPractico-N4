@@ -1,5 +1,5 @@
-import service from '../../services/comments/index.js'
-import { integerRegex } from '../../utils/regex.js'
+import service from './../../services/comments/index.js'
+import { integerRegex } from './../../utils/regex.js'
 
 const getAllComments = async (req, res) => {
 	const comments = await service.getAllComments()

@@ -1,4 +1,4 @@
-import Language from '../../models/Language.js'
+import Language from './../../models/Language.js'
 
 const getAllLanguages = () => {
 	const languages = Language.getAllLanguages()

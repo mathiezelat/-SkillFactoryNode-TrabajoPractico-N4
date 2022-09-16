@@ -1,5 +1,5 @@
-import service from '../../services/hobbies/index.js'
-import { integerRegex } from '../../utils/regex.js'
+import service from './../../services/hobbies/index.js'
+import { integerRegex } from './../../utils/regex.js'
 
 const getAllHobbies = async (req, res) => {
 	const hobbies = await service.getAllHobbies()

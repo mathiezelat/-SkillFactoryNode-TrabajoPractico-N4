@@ -2,16 +2,16 @@ import passport from 'passport'
 import { Strategy as LocalStrategy } from 'passport-local'
 import bcrypt from 'bcrypt'
 
-import User from '../models/User.js'
+import User from './../models/User.js'
 
-import { uniqueID } from '../utils/uniqueID.js'
+import { uniqueID } from './../utils/uniqueID.js'
 
 import {
 	avatarRegex,
 	dateRegex,
 	phoneRegex,
 	emailRegex,
-} from '../utils/regex.js'
+} from './../utils/regex.js'
 
 passport.serializeUser((user, done) => {
 	done(null, user.id)

@@ -1,4 +1,4 @@
-import Hobby from '../../models/Hobby.js'
+import Hobby from './../../models/Hobby.js'
 
 const getAllHobbies = () => {
 	const hobbies = Hobby.getAllHobbies()

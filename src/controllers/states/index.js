@@ -1,5 +1,5 @@
-import service from '../../services/states/index.js'
-import { integerRegex } from '../../utils/regex.js'
+import service from './../../services/states/index.js'
+import { integerRegex } from './../../utils/regex.js'
 
 const getAllStates = async (req, res) => {
 	const states = await service.getAllStates()

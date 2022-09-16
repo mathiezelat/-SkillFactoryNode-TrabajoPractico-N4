@@ -1,4 +1,4 @@
-import State from '../../models/State.js'
+import State from './../../models/State.js'
 
 const getAllStates = () => {
 	const states = State.getAllStates()
