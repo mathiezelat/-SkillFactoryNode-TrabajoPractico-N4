@@ -9,7 +9,7 @@ import {
 	integerRegex,
 } from './../../utils/regex.js'
 
-import { uniqueID } from '../../utils/uniqueId.js'
+import { uniqueID } from './../../utils/uniqueId.js'
 
 const getAllUsers = async (req, res) => {
 	const users = await service.getAllUsers()
