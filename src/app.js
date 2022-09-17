@@ -1,6 +1,7 @@
 import express from 'express'
 import session from 'express-session'
 import passport from 'passport'
+import flash from 'connect-flash'
 import morgan from 'morgan'
 import cors from 'cors'
 import path from 'path'
@@ -39,6 +40,7 @@ app.use(
 
 app.use(passport.initialize())
 app.use(passport.session())
+app.use(flash())
 
 app.use('/api', apiRoute)
 app.use(v1ProfileRoute)

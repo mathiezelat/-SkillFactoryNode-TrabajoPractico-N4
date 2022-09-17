@@ -8,13 +8,26 @@ router
 		res.render('register')
 	})
 	.get('/error', (req, res) => {
-		res.status(400).send('error auth')
+		const { error } = req.flash()
+
+		if (error) {
+			res.render('error', {
+				message: 'Al registrarse',
+				error: error[0],
+			})
+		} else {
+			res.render('error', {
+				message: 'Al registrarse',
+				error: 'Error inesperado',
+			})
+		}
 	})
 	.post(
 		'/',
 		passport.authenticate('local-register', {
 			successRedirect: '/profile',
 			failureRedirect: '/api/auth/register/error',
+			failureFlash: true,
 			passReqToCallback: true,
 		})
 	)

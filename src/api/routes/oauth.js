@@ -6,7 +6,19 @@ const router = Router()
 router
 	.get('/google', passport.authenticate('google'))
 	.get('/google/error', (req, res) => {
-		res.send('error google')
+		const { error } = req.flash()
+
+		if (error) {
+			res.render('error', {
+				message: 'Al iniciar sesión con Google',
+				error: error[0],
+			})
+		} else {
+			res.render('error', {
+				message: 'Al iniciar sesión con Google',
+				error: 'Error inesperado',
+			})
+		}
 	})
 	.get(
 		'/google/redirect',

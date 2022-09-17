@@ -8,13 +8,26 @@ router
 		res.render('login')
 	})
 	.get('/error', (req, res) => {
-		res.status(400).send('error auth')
+		const { error } = req.flash()
+
+		if (error) {
+			res.render('error', {
+				message: 'Al iniciar sesión',
+				error: error[0],
+			})
+		} else {
+			res.render('error', {
+				message: 'Al iniciar sesión',
+				error: 'Error inesperado',
+			})
+		}
 	})
 	.post(
 		'/',
 		passport.authenticate('local-login', {
 			successRedirect: '/profile',
 			failureRedirect: '/api/auth/login/error',
+			failureFlash: true,
 			passReqToCallback: true,
 		})
 	)
