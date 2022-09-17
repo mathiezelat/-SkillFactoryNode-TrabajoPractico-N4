@@ -23,7 +23,7 @@ const createCountry = async (req, res) => {
 	const { name, code } = req.body
 
 	if (!name || !code) {
-		return res.status(400).send('Please provide all required fields')
+		return res.status(400).send('Required fields: name and code')
 	}
 
 	const newCountry = {

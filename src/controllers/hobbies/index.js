@@ -23,7 +23,7 @@ const createHobby = async (req, res) => {
 	const { name, user_id } = req.body
 
 	if (!name || !user_id) {
-		return res.status(400).send('Please provide all required fields')
+		return res.status(400).send('Required fields: name and user_id')
 	}
 
 	if (!integerRegex.test(user_id)) {

@@ -23,7 +23,9 @@ const createSkill = async (req, res) => {
 	const { name, level, type, field_id } = req.body
 
 	if (!name || !level || !type || !field_id) {
-		return res.status(400).send('Please provide all required fields')
+		return res
+			.status(400)
+			.send('Required fields: name, level, type and field_id')
 	}
 
 	if (!integerRegex.test(field_id)) {

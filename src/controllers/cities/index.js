@@ -23,7 +23,7 @@ const createCity = async (req, res) => {
 	const { name, code, state_id } = req.body
 
 	if (!name || !code || !state_id) {
-		return res.status(400).send('Please provide all required fields')
+		return res.status(400).send('Required fields: name, code and state_id')
 	}
 
 	if (!integerRegex.test(state_id)) {

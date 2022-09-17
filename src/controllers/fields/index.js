@@ -23,7 +23,7 @@ const createField = async (req, res) => {
 	const { name, type } = req.body
 
 	if (!name || !type) {
-		return res.status(400).send('Please provide all required fields')
+		return res.status(400).send('Required fields: name and type')
 	}
 
 	const newField = {

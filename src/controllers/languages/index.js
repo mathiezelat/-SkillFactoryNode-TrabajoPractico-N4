@@ -23,7 +23,7 @@ const createLanguage = async (req, res) => {
 	const { name, level } = req.body
 
 	if (!name || !level) {
-		return res.status(400).send('Please provide all required fields')
+		return res.status(400).send('Required fields: name and level')
 	}
 
 	const newLanguage = {

@@ -23,7 +23,9 @@ const createComment = async (req, res) => {
 	const { body, post_id, written_by } = req.body
 
 	if (!body || !post_id || !written_by) {
-		return res.status(400).send('Please provide all required fields')
+		return res
+			.status(400)
+			.send('Required fields: body, post_id and written_by')
 	}
 
 	if (!integerRegex.test(post_id) || !integerRegex.test(written_by)) {

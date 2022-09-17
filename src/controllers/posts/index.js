@@ -23,7 +23,7 @@ const createPost = async (req, res) => {
 	const { body, multimedia, author_id } = req.body
 
 	if (!body || !author_id) {
-		return res.status(400).send('Please provide all required fields')
+		return res.status(400).send('Required fields: body and author_id')
 	}
 
 	const newPost = {

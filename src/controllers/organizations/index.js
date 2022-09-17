@@ -24,7 +24,11 @@ const createOrganization = async (req, res) => {
 		req.body
 
 	if (!name || !website || !type || !dateOfFounding || !field_id) {
-		return res.status(400).send('Please provide all required fields')
+		return res
+			.status(400)
+			.send(
+				'Required fields: name, website, type, dateOfFounding and field_id'
+			)
 	}
 
 	if (!integerRegex.test(field_id)) {

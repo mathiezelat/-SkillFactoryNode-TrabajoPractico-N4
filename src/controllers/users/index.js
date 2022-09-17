@@ -44,7 +44,7 @@ const createUser = async (req, res) => {
 	} = req.body
 
 	if (!name || !surname || !avatar) {
-		return res.status(400).send('Please provide all required fields')
+		return res.status(400).send('Required fields: name, surname and avatar')
 	}
 
 	if (!email || !password) {

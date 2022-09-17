@@ -22,7 +22,9 @@ const createState = async (req, res) => {
 	const { name, code, country_id } = req.body
 
 	if (!name || !code || !country_id) {
-		return res.status(400).send('Please provide all required fields')
+		return res
+			.status(400)
+			.send('Required fields: name, code and country_id')
 	}
 
 	if (!integerRegex.test(country_id)) {
