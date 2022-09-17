@@ -287,6 +287,11 @@ npx prisma generate
 		"phone": "1140506070",
 		"description": "Full Stack Developer",
 		"actualJob": "Full Stack",
-		"status": "Working"
+		"status": "Working",
+		"language_id": 1,
+		"organization_id": 1,
+		"country_id": 1,
+		"state_id": 1,
+		"city_id": 1
 }
 ```
