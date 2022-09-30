@@ -41,7 +41,7 @@ npx prisma generate
 
 - @prisma/cliente
 - bcrypt
-- corss
+- cors
 - dotenv
 - ejs
 - express
